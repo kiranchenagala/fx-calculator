@@ -1,0 +1,21 @@
+swagger: '2.0'
+info:
+  title: Some API
+  version: '1'
+paths:
+  /conversion/nmea/geojson:
+    post:
+      consumes:
+        - multipart/form-data
+      parameters:
+        - in: formData
+          name: file
+          type: file
+      produces:
+        - text/plain
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: string
+            example: "File upload successful"
